@@ -6,7 +6,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -48,13 +47,11 @@ public class Main {
             JSONArray o = (JSONArray) parse.parse(inline);
 
 
-
-
             for (int i = 0; i < o.size(); i++) {
 
                 JSONObject jsonobj_1 = (JSONObject) o.get(i);
                 suma += (Double) jsonobj_1.get("cena");
-                System.out.println("Cena: " + jsonobj_1.get("cena"));
+                System.out.println("Cena: " + jsonobj_1.get("cena") + " PLN");
                 System.out.println("Data: " + jsonobj_1.get("data"));
             }
 
